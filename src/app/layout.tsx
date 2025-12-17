@@ -24,6 +24,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "AI Productivity Blog - Tools & Techniques for Enhanced Workflow",
   description: "Discover the latest AI tools and productivity techniques to supercharge your workflow. Expert reviews, guides, and insights on AI-powered productivity solutions.",
+  verification: {
+    google: "PIveM0Jopj6lDBOl86FlSMjYpQCRkyQH6WFKiRdeCD4",
+  },
   keywords: ["AI productivity", "productivity tools", "AI writing tools", "automation", "task management", "AI research", "workflow optimization"],
   authors: [{ name: "AI Productivity Blog Team" }],
   icons: {
