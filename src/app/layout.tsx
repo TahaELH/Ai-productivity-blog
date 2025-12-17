@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import Script from "next/script"; // <-- Import Script for AdSense
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,15 @@ export const metadata: Metadata = {
   verification: {
     google: "PIveM0Jopj6lDBOl86FlSMjYpQCRkyQH6WFKiRdeCD4",
   },
-  keywords: ["AI productivity", "productivity tools", "AI writing tools", "automation", "task management", "AI research", "workflow optimization"],
+  keywords: [
+    "AI productivity",
+    "productivity tools",
+    "AI writing tools",
+    "automation",
+    "task management",
+    "AI research",
+    "workflow optimization",
+  ],
   authors: [{ name: "AI Productivity Blog Team" }],
   icons: {
     icon: "/logo.svg",
@@ -62,6 +71,7 @@ export const metadata: Metadata = {
   },
   other: {
     "format-detection": "telephone=no",
+    "google-adsense-account": "ca-pub-6002519471917340", // <-- AdSense meta
   },
 };
 
@@ -72,13 +82,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Google AdSense Script */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6002519471917340"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
         <Header />
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <main className="min-h-screen">{children}</main>
         <Footer />
         <Toaster />
       </body>
