@@ -235,7 +235,6 @@ export const blogPosts: Record<string, BlogPost> = {
     featuredImage: "/api/placeholder/1200/600"
   },
 
-  // Continuing with more articles... (I'll create a condensed version due to length)
   "ai-writing-tools-academic-research": {
     slug: "ai-writing-tools-academic-research",
     title: "How to Use AI Writing Tools for Academic Research Papers",
