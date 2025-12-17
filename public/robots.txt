@@ -23,10 +23,10 @@ Allow: /
 
 # Block unnecessary bots
 User-agent: AhrefsBot
-Disallow: /
+allow: /
 
 User-agent: MJ12bot
-Disallow: /
+allow: /
 
 User-agent: DotBot
-Disallow: /
+allow: /
